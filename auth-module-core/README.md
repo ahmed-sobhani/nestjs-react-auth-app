@@ -1,73 +1,132 @@
+# NestJS Backend API
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/your/repository/blob/master/LICENSE)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/your/repository/graphs/commit-activity)
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Modern and scalable backend API built with [Nest](https://github.com/nestjs/nest) framework.
+
+## Features
+
+- 🔐 JWT Authentication & Authorization
+- 📚 MongoDB Database Integration
+- 📝 Swagger API Documentation
+- 🔄 Refresh Token Rotation
+- 🚫 Rate Limiting
+- 🌍 Environment Configuration
+- 🔍 Request Validation
+- 🎯 Error Handling
+- 📋 Logging System
+- 🔒 Security Headers
+
+## Prerequisites
+
+```bash
+node >= 18.x
+npm >= 9.x
+mongodb >= 6.x
+```
 
 ## Installation
 
 ```bash
-$ yarn install
+# Clone repository
+$ git clone <repository-url>
+
+# Install dependencies
+$ npm install
+
+# Create environment file
+$ cp .env.sample .env
 ```
 
 ## Running the app
 
 ```bash
 # development
-$ yarn run start
+$ npm run start
 
 # watch mode
-$ yarn run start:dev
+$ npm run start:dev
 
 # production mode
-$ yarn run start:prod
+$ npm run build
+$ npm run start:prod
 ```
 
-## Test
+## API Documentation
+
+Swagger documentation is available at:
+```
+http://localhost:{PORT}/api
+```
+
+## Environment Variables
+
+Create `.env` file from `.env.sample`:
+
+
+## Available Commands
 
 ```bash
-# unit tests
-$ yarn run test
+# Start application
+$ npm run start        # Normal mode
+$ npm run start:dev    # Watch mode
+$ npm run start:debug  # Debug mode
+$ npm run start:prod   # Production mode
 
-# e2e tests
-$ yarn run test:e2e
+# Build application
+$ npm run build
 
-# test coverage
-$ yarn run test:cov
+# Generate new resource
+$ npm run nest g resource [name]
 ```
+
+
+## Environment Configuration
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| PORT | Application port | 3000 |
+| NODE_ENV | Environment mode | development |
+| MONGODB_URI | MongoDB connection string | mongodb://localhost:27017/db |
+| JWT_ACCESS_SECRET | JWT access token secret | - |
+| JWT_ACCESS_EXPIRE | JWT access token expiration | 15m |
+| JWT_REFRESH_SECRET | JWT refresh token secret | - |
+| JWT_REFRESH_EXPIRE | JWT refresh token expiration | 7d |
+
+## Security Implementations
+
+- 🔒 Helmet middleware for security headers
+- 🚫 Rate limiting protection
+- 🔑 JWT token authentication
+- 🔐 Password hashing
+- ✅ Request validation
+- 🛡️ MongoDB injection protection
+- 🌐 CORS configuration
+
+## Error Handling
+
+Custom exception filters handle:
+- HTTP Exceptions
+- Validation Errors
+- MongoDB Errors
+- Unauthorized Access
+- Rate Limit Exceeded
 
 ## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+For support, email your team at `ahmad.sobhani@hotmail.com`
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- Author - Ahmad Sobhani
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+This project is [MIT licensed](LICENSE).
